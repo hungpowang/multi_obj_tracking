@@ -52,6 +52,7 @@ while cv2.waitKey(1) < 1:
         none_type_checking(new)  # checking
 
     start_drawing = time.time()
+    # 標上bounding box
     for i, (classid, score, box) in enumerate(zip(classes, scores, boxes)):
         color = COLORS[int(classid) % len(COLORS)]
         label = "%s : %.2f" % (class_names[classid[0]], score)
@@ -61,6 +62,7 @@ while cv2.waitKey(1) < 1:
         cv2.rectangle(frame, box, color, 2)
         cv2.putText(frame, label, (box[0], box[1] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
 
+    # 標上ID
     for item in new:
         # Draw tracking IDs
         text = "ID={}, C={}" .format(item['id'], round(item['confidence'], 1))
