@@ -9,3 +9,5 @@
 ### Input format
 * The inputs for tracker is a list of bounding boxes
 * Boxes are defined as [x, y, w, h]
+
+![A picture of a snapshot of the demo](https://i.imgur.com/cldZbR7.jpg)
